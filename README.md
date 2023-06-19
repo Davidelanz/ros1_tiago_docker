@@ -20,7 +20,7 @@ The noVNC GUI is available at `http://localhost:8080/vnc.html`
 
 To launch a `.launch` file, e.g. `tiago_dual_gazebo`:
 ```sh
-docker exec -it ros_tiago_docker-catkin_ws-1 bash -c '\
+docker exec -it ros1_tiago_docker-catkin_ws-1 bash -c '\
     source /opt/ros/melodic/setup.bash \
     && source /root/catkin_ws/devel/setup.bash \
     && roslaunch \
@@ -36,7 +36,7 @@ docker exec -it ros_tiago_docker-catkin_ws-1 bash -c '\
 
 To launch `rviz`:
 ```sh
-docker exec -it ros_tiago_docker-catkin_ws-1 '\
+docker exec -it ros1_tiago_docker-catkin_ws-1 '\
     source /opt/ros/melodic/setup.bash \
     && source /root/catkin_ws/devel/setup.bash \
     && rosrun rviz rviz'
@@ -44,7 +44,7 @@ docker exec -it ros_tiago_docker-catkin_ws-1 '\
 
 To launch `rqt_graph`:
 ```sh
-docker exec -it ros_tiago_docker-catkin_ws-1 '\
+docker exec -it ros1_tiago_docker-catkin_ws-1 '\
     source /opt/ros/melodic/setup.bash \
     && source /root/catkin_ws/devel/setup.bash \
     && rosrun rqt_graph rqt_graph'
