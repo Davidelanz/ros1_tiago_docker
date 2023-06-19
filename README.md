@@ -16,25 +16,34 @@ The noVNC GUI is available at `http://localhost:8080/vnc.html`
 
 To launch a `.launch` file, e.g. `tiago_dual_gazebo`:
 ```sh
-docker exec -it ros_tiago_docker-catkin_ws-1 bash -c 'roslaunch \
-    tiago_dual_gazebo \
-    tiago_dual_gazebo.launch \
-    public_sim:=true \
-    end_effector_left:=pal-gripper \
-    end_effector_right:=pal-gripper \
-    world:=tutorial_office \
-    gzpose:="-x 1.40 -y -2.79 -z -0.003 -R 0.0 -P 0.0 -Y 0.0" \
-    use_moveit_camera:=true'
+docker exec -it ros_tiago_docker-catkin_ws-1 bash -c '\
+    source /opt/ros/melodic/setup.bash \
+    && source /root/catkin_ws/devel/setup.bash \
+    && roslaunch \
+        tiago_dual_gazebo \
+        tiago_dual_gazebo.launch \
+        public_sim:=true \
+        end_effector_left:=pal-gripper \
+        end_effector_right:=pal-gripper \
+        world:=tutorial_office \
+        gzpose:="-x 1.40 -y -2.79 -z -0.003 -R 0.0 -P 0.0 -Y 0.0" \
+        use_moveit_camera:=true'
 ```
 
 To launch `rviz`:
 ```sh
-docker exec -it ros_tiago_docker-catkin_ws-1 rosrun rviz rviz
+docker exec -it ros_tiago_docker-catkin_ws-1 '\
+    source /opt/ros/melodic/setup.bash \
+    && source /root/catkin_ws/devel/setup.bash \
+    && rosrun rviz rviz'
 ```
 
 To launch `rqt_graph`:
 ```sh
-docker exec -it ros_tiago_docker-catkin_ws-1 rosrun rqt_graph rqt_graph
+docker exec -it ros_tiago_docker-catkin_ws-1 '\
+    source /opt/ros/melodic/setup.bash \
+    && source /root/catkin_ws/devel/setup.bash \
+    && rosrun rqt_graph rqt_graph'
 ```
 
 To add a new package, add the respective volume in the `docker-compose.yml` file:
