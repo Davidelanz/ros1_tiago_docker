@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+
+  catkin_ws:
+    build:
+      dockerfile: .docker/Dockerfile
+    environment:
+      DISPLAY: "novnc:0.0"
+    # volumes:
+    #   - ./catkin_ws/src/<package_name>:/root/catkin_ws/src/<package_name>
+    working_dir: /root/catkin_ws/
+    depends_on:
+      novnc:
+        condition: service_started
+    stdin_open: true
+    tty: true
+
+  novnc:
+    image: theasp/novnc:latest
+    environment:
+      DISPLAY_WIDTH: 1920
+      DISPLAY_HEIGHT: 1080
+      RUN_XTERM: no
+    ports:
+      - 8080:8080

@@ -1,0 +1,12 @@
+###########################
+# VSCode
+.vscode
+
+###########################
+# Catkin build files
+# - Build space:
+catkin_ws/build/**
+# - Devel space:
+catkin_ws/devel/**
+# - Install space:
+catkin_ws/install/**
