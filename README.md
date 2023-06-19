@@ -6,6 +6,10 @@
 
 > Based on https://github.com/Davidelanz/ros1_gazebo_docker
 
+<img width=600 align=center alt="noVNC preview" src=".readme_assets/preview_gazebo.jpg">
+
+---
+
 To spin up the development environment (use `--build` to freshly build the docker image):
 ```sh
 docker compose up
