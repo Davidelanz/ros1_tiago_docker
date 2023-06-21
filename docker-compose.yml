@@ -8,7 +8,7 @@ services:
     environment:
       DISPLAY: "novnc:0.0"
     # volumes:
-    #   - ./catkin_ws/src/<package_name>:/root/catkin_ws/src/<package_name>
+    #   - /path/to/<package_name>:/root/catkin_ws/src/<package_name>
     working_dir: /root/catkin_ws/
     depends_on:
       novnc:

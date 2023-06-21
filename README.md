@@ -53,5 +53,5 @@ docker exec -it ros1_tiago_docker-catkin_ws-1 '\
 To add a new package, add the respective volume in the `docker-compose.yml` file:
 ```yml
 volumes:
-    - ./catkin_ws/src/<package_name>:/root/catkin_ws/src/<package_name>
+    - /path/to/<package_name>:/root/catkin_ws/src/<package_name>
 ```
