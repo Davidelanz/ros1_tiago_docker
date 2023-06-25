@@ -1,4 +1,5 @@
 FROM ubuntu:bionic
+LABEL org.opencontainers.image.description "Docker enabled TIAGo++ ROS workspace"
 
 WORKDIR /root/catkin_ws
 ENV DEBIAN_FRONTEND noninteractive

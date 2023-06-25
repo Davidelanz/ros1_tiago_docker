@@ -6,6 +6,7 @@ name: Docker publish image
 # documentation.
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - Dockerfile # Only when Dockerfile is changed
