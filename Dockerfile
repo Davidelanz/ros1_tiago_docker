@@ -1,5 +1,10 @@
 FROM ubuntu:bionic
 LABEL org.opencontainers.image.description "Docker enabled TIAGo++ ROS workspace"
+LABEL org.opencontainers.image.authors="info@davidelanza.it"
+LABEL org.opencontainers.image.url="https://github.com/Davidelanz/ros1_tiago_docker/"
+LABEL org.opencontainers.image.documentation="https://github.com/Davidelanz/ros1_tiago_docker/"
+LABEL org.opencontainers.image.source="https://github.com/Davidelanz/ros1_tiago_docker/"
+LABEL org.opencontainers.image.licenses="gpl-3.0"
 
 WORKDIR /root/catkin_ws
 ENV DEBIAN_FRONTEND noninteractive

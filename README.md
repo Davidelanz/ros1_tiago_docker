@@ -1,4 +1,4 @@
-# Docker enabled TIAGo++ ROS workspace
+# `ros1_tiago_docker` - Docker enabled TIAGo++ ROS workspace
 
 [![Ubuntu Bionic](https://img.shields.io/badge/Ubuntu-bionic-blue)](https://releases.ubuntu.com/18.04/)
 [![ROS Melodic](https://img.shields.io/badge/ROS-melodic-blue)](http://wiki.ros.org/melodic)
