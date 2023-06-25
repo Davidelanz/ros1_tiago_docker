@@ -68,7 +68,6 @@ jobs:
         with:
           # List of Docker images to use as base name for tags
           images: |
-            ${{ env.IMAGE_NAME }}
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           # Generate Docker tags based on the following events/attributes
           # https://github.com/docker/metadata-action#tags-input
