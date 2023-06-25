@@ -23,10 +23,11 @@ jobs:
 
     steps:
       # https://github.com/actions/delete-package-versions
-      - name: Delete all untagged container versions except 5 latest untagged versions
+      - name: Delete all except latest 5 package versions excluding major versions
         uses: actions/delete-package-versions@v4
         with:
           package-name: 'ros1_tiago_docker'
           package-type: 'container'
           min-versions-to-keep: 5
-          delete-only-untagged-versions: 'true'
+          # delete-only-untagged-versions: 'true'
+          ignore-versions: '^(0|[1-9]\\d*)\\.0\\.0$'
