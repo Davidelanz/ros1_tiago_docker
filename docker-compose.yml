@@ -3,8 +3,9 @@ version: '3.8'
 services:
 
   catkin_ws:
-    build:
-      dockerfile: .docker/Dockerfile
+    image: ghcr.io/davidelanz/ros1_tiago_docker
+    # build:
+    #   dockerfile: .docker/Dockerfile
     environment:
       DISPLAY: "novnc:0.0"
     # volumes:

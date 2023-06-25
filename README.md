@@ -10,12 +10,28 @@
 
 ---
 
-To spin up the development environment (use `--build` to freshly build the docker image):
+To spin up the development environment:
 ```sh
 docker compose up
 ```
 
 The noVNC GUI is available at `http://localhost:8080/vnc.html`
+
+
+> To to freshly build the docker image change from:
+> ```yml
+> image: ghcr.io/davidelanz/ros1_tiago_docker
+> ```
+> to:
+> ```yml
+> build:
+>     dockerfile: ./Dockerfile
+> ```
+> and use:
+> ```sh
+> docker compose up --build
+> ```
+
 
 
 To launch a `.launch` file, e.g. `tiago_dual_gazebo`:

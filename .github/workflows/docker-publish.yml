@@ -73,6 +73,7 @@ jobs:
           # Generate Docker tags based on the following events/attributes
           # https://github.com/docker/metadata-action#tags-input
           tags: |
+            latest
             type=semver,pattern={{version}}
 
       # Build and push Docker image with Buildx (don't push on PR)
