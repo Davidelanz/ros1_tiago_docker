@@ -4,7 +4,7 @@
 [![ROS Melodic](https://img.shields.io/badge/ROS-melodic-blue)](http://wiki.ros.org/melodic)
 [![Robot TIAGo++](https://img.shields.io/badge/Robot-TIAGo++-blue)](https://wiki.ros.org/Robots/TIAGo++)
 
-> Based on https://github.com/Davidelanz/ros1_gazebo_docker
+> Based on https://github.com/Davidelanz/ros1_docker
 
 <img width=600 align=center alt="noVNC preview" src=".readme_assets/preview_gazebo.jpg">
 
